@@ -1,0 +1,14 @@
+{
+    "name": "acme/ecommerce",
+    "description": "An e-commerce application",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Acme\\Ecommerce\\": "src/"
+        }
+    },
+    "require": {
+        "php": ">=7.0",
+        "yabacon/paystack-php": "^2.2"
+    }
+}
