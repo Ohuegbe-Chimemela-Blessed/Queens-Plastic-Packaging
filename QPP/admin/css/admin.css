@@ -1,0 +1,396 @@
+body{
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+.admin-container{
+    position: relative;
+    width: 100%;
+    overflow-y: scroll;
+}
+.ad-nav{
+    position: fixed;
+    width: 300px;
+    height: 100%;
+    background-color: black;
+    /* box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1),
+    0 8px 32px 0 rgba(31, 38, 135, 0.171); */
+    backdrop-filter: blur(10px);
+    border-left: 10px solid black ;
+    transition: .5s;
+    overflow: hidden;
+}
+.ad-nav.active{
+    width: 50px;
+    transition: .5s;
+}
+.ad-nav ul{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+.ad-nav ul  li{
+    position: relative;
+    width: 200%;
+   
+}
+.ad-nav ul  li  i{
+    padding-right: 1rem;
+}
+.ad-nav ul  li:hover{
+    background: white;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+    text-align: center;
+}
+.ad-nav ul  li:nth-child(1){
+    margin-bottom: 40px;
+    pointer-events: none;
+    
+}
+.b-name,.icon,.toggle,.numbers,.card:hover .iconBx,.card:nth-child(1) i{
+    background-image: url(../images/gold.jpg);
+    background-repeat: repeat;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.icon{
+    position: relative;
+    display: block;
+    min-width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+}
+/* .icon   i{
+    font-size: 1.7em;
+} */
+.title{
+    position: relative;
+    display: block;
+    padding: 0  10px;
+    height: 50px;
+    line-height: 30px;
+    text-align: start;
+    white-space: nowrap;
+}
+.ad-nav ul  li  a{
+    position: relative;
+    display: block;
+    width: 100%;
+    color: white;
+    text-align: center;
+    padding-top: 1rem;
+}
+.ad-nav ul  li:hover a,
+.ad-nav ul  li.hovered  a{
+    color: black;
+}
+
+/* 
+.ad-nav ul  li:hover  a::before{
+    content: '';
+    position: absolute;
+    right: 0;
+    top: -50px;
+    width: 50px;
+    height: 50px;
+    background: red;
+    border-radius: 50%;
+    box-shadow: 35px 35px 0 10px grey;
+
+} */
+
+/* **************main************** */
+.main-admin{
+    position: absolute;
+    width: calc(100%  -  300px);
+    left: 300px;
+    min-height: 100vh;
+    transition: .5s;
+    overflow-y: scroll;
+}
+.main-admin.active{
+    width: calc(100%  -  80px);
+    left: 80px;
+
+}
+.topbar{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0  10px;
+    /* background-color: aquamarine; */
+
+}
+.toggle{
+    position: relative;
+    top: .25rem;
+    width: 50px;
+    height: 50px;
+    background-color: antiquewhite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+.search label{
+    position: relative;
+    width: 100%;
+}
+.user{
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+}
+.user   img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/* cards */
+.cardBox{
+    position: relative;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 30px;
+    width: 100%;
+}
+.cardBox    .card{
+    position: relative;
+    border-radius: 20px;
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.158);
+}
+.cardBox  .card .numbers{
+    font-weight: 500;
+    font-size: 2.5em;
+    position: relative;
+}
+.cardName{
+    font-size: 1em;
+    margin-top: 5px;
+    color: grey;
+}
+table{
+    overflow-y: scroll;
+}
+.iconBx{
+    font-size: 3em;
+}
+.card:hover,.card:nth-child(1){
+    background: #000;
+}
+.details{
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    grid-template-columns: 2fr  1fr;
+    display: grid;
+    grid-gap: 30px;
+    /* margin-top: 10px; */
+}
+.recentOrders{
+    position: relative;
+    display: grid;
+    min-height: 200px;
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+}
+.cardHeader{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.cardHeader h2{
+    font-weight: 600px;
+}
+.btn{
+    position: relative;
+    padding: 5px  10px;
+    background: #000;
+    color: white;
+    border-radius: 20px;
+    right: -2rem;
+}
+.details  table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+table  thead    td{
+    font-weight: 600;
+    color: black;
+}
+.details .recentOrders  table   tr{
+    color: rgb(80, 80, 80);
+    border-bottom: 1px solid   rgba(0, 0, 0, 0.185) ;
+}
+.details .recentOrders  table  tr:last-child{
+    border-bottom: none;
+}
+.details .recentOrders  table tbody  tr:hover, table tr:hover{
+    background-color: #000;
+    color: white;
+}
+ td{
+    padding: 3.5px;
+}
+td:last-child,
+td:nth-child(2),
+td:nth-child(3){
+    text-align: end;
+}
+.status.delivered{
+    padding: 2px  4px;
+    background-color: rgb(104, 235, 104);
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 14px;
+    color: white;
+}
+.status.pending{
+    padding: 2px  4px;
+    background-color: orange;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 14px;
+    color: white;
+}
+.status.return{
+    padding: 2px  4px;
+    background-color: rgb(247, 41, 41);
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 14px;
+    color: white;
+}
+.status.progress{
+    padding: 2px  4px;
+    background-color: lightblue;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 14px;
+    color: white;
+}
+
+
+
+.recentCustomers{
+    position: relative;
+    display: grid;
+    /* min-height: 500px; */
+    padding: 20px;
+    box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+    border-radius: 20px;
+}
+.recentCustomers  .imgBx{
+    position: relative;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    overflow: hidden;
+    z-index: 20000;
+
+}
+
+.recentCustomers  .imgBx   img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    object-fit: cover;
+    z-index: 20000;
+}
+.recentCustomers  table tr{
+    display: flex;
+    align-items: flex-start;
+    justify-content:flex-start;
+}
+/* Rrsponsive////// */
+@media(max-width:991px){
+    .ad-nav{
+        left: -300px;
+    }
+    .ad-nav.active{
+        left: 0;
+        width: 300px;
+    }
+    .main-admin{
+        width: 100%;
+        left: 0;
+        margin-right: 20px;
+        overflow-y: scroll;
+
+    }
+    .main-admin.active{
+        left: 300px;
+    }
+    .cardBox{
+        grid-template-columns: repeat(2,1fr);
+    }
+    
+}
+@media(max-width:768px){
+    .toggle{
+        z-index: 200000
+
+}
+    .search{
+        margin-left: 1rem;
+
+    }
+    .details{
+        grid-template-columns: repeat(1,1fr);
+        overflow-y: scroll;
+    }
+    .recentOrders{
+        overflow-x: auto;
+    }
+    .status.progress{
+        white-space: nowrap;
+    }
+}
+@media(max-width:480px){
+    /* .toggle{
+        margin-left: -1rem;
+} */
+    .cardBox{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .cardHeader h2{
+        font-size: 20px;
+    }
+    .user{
+        min-width: 40px;
+    }
+    .ad-nav{
+        width: 100%;
+        left: -100%;
+        z-index: 1000;
+    }
+    .ad-nav.active{
+        width: 100%;
+        left: 0;
+    }
+}
+
+/* 
+.ad-nav ul  li:hover  a::before{
+    content: "";
+    position: absolute;
+} */
